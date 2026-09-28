@@ -72,7 +72,7 @@ export default function ContactoPage() {
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Comunicación directa</h4>
-                  <p className="text-slate-400 text-sm leading-relaxed">Habla directamente con un experto inmobiliario sin intermediarios ni tiempos de espera (+52 1 56 3358 5933).</p>
+                  <p className="text-slate-400 text-sm leading-relaxed">Habla directamente con un experto inmobiliario sin intermediarios ni tiempos de espera (<a href="tel:+5215633585933" className="text-slate-300 hover:text-white transition-colors underline decoration-slate-500/50 hover:decoration-white">+52 1 56 3358 5933</a>).</p>
                 </div>
               </div>
               <div className="flex items-start gap-5">
@@ -81,7 +81,7 @@ export default function ContactoPage() {
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Información detallada</h4>
-                  <p className="text-slate-400 text-sm leading-relaxed">Recibe brochures técnicos, corridas financieras y disponibilidad en tiempo real (contacto@casaa10.com).</p>
+                  <p className="text-slate-400 text-sm leading-relaxed">Recibe brochures técnicos, corridas financieras y disponibilidad en tiempo real (<a href="mailto:contacto@casaa10.com" className="text-slate-300 hover:text-white transition-colors underline decoration-slate-500/50 hover:decoration-white">contacto@casaa10.com</a>).</p>
                 </div>
               </div>
             </div>
