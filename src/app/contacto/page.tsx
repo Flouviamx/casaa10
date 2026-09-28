@@ -203,21 +203,6 @@ export default function ContactoPage() {
 
         </div>
       </section>
-
-      {/* Mapa de Contacto Ultra Ancho */}
-      <section className="w-full h-[500px] mt-12 bg-slate-200 relative overflow-hidden group">
-        <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-700 pointer-events-none"></div>
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.661168128456!2d-99.20014022394142!3d19.432607181848523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d202027e0a4f5d%3A0xc6fb694a5e01b7a4!2sPolanco%2C%20Miguel%20Hidalgo%2C%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx" 
-          width="100%" 
-          height="100%" 
-          style={{ border: 0 }} 
-          allowFullScreen={true} 
-          loading="lazy" 
-          referrerPolicy="no-referrer-when-downgrade"
-          className="grayscale-[0.3] contrast-125"
-        ></iframe>
-      </section>
       
       <Footer />
     </main>
