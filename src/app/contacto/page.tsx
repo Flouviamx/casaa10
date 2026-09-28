@@ -35,103 +35,100 @@ export default function ContactoPage() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-50 font-sans selection:bg-[#0f2146] selection:text-white flex flex-col">
+    <main className="min-h-screen bg-slate-50 font-sans selection:bg-[#0a152e] selection:text-white flex flex-col">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative pt-48 pb-20 px-6 md:px-12 overflow-hidden">
-        <div className="absolute top-0 right-0 w-full h-[600px] bg-gradient-to-bl from-blue-100/40 via-slate-50 to-transparent -z-10"></div>
-        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-blue-200/20 blur-[100px] -z-10"></div>
-        
-        <div className="max-w-[1400px] mx-auto">
-          <span className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-4 block">Contacto</span>
-          <h1 className="text-5xl md:text-7xl font-bold text-[#0a152e] tracking-tighter leading-tight max-w-3xl mb-6">
-            Estamos aquí para <br/>hacerlo realidad.
+      {/* Hero Section Apple Style (Dark Mode to contrast Navbar) */}
+      <section className="relative pt-48 pb-32 md:pb-40 px-6 md:px-12 bg-[#0a152e] overflow-hidden rounded-b-[40px] md:rounded-b-[80px] shadow-2xl">
+        {/* Glows y Luces */}
+        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-blue-500/20 blur-[120px] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[800px] h-[600px] rounded-full bg-indigo-500/10 blur-[150px] pointer-events-none"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 pointer-events-none mix-blend-overlay"></div>
+
+        <div className="max-w-[1400px] mx-auto relative z-10 flex flex-col items-center text-center">
+          <span className="text-xs md:text-sm font-bold text-blue-400 uppercase tracking-[0.25em] mb-6 block">Hablemos</span>
+          <h1 className="text-5xl md:text-[80px] font-bold text-white tracking-tighter leading-[1.05] max-w-4xl mb-8">
+            Comienza a construir<br className="hidden md:block" /> tu patrimonio.
           </h1>
-          <p className="text-xl text-slate-500 max-w-2xl leading-relaxed">
-            Ya sea que busques el hogar de tus sueños o la mejor inversión, nuestros expertos están listos para guiarte en cada paso del camino.
+          <p className="text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed font-light">
+            Nuestros asesores patrimoniales están listos para brindarte una experiencia a la altura de tus expectativas.
           </p>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-12 flex-1 w-full">
+      <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-20 flex-1 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
           
           {/* Columna Izquierda: Info de Contacto */}
           <div className="lg:col-span-5 flex flex-col gap-12">
             
-            <div>
-              <h2 className="text-2xl font-bold text-[#0a152e] mb-8">Información directa</h2>
-              <div className="flex flex-col gap-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-sm">
-                    <Mail className="w-5 h-5 text-[#0a152e]" />
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-bold text-[#0a152e] uppercase tracking-widest mb-1">Correo Electrónico</h3>
-                    <p className="text-slate-500 text-lg hover:text-blue-600 transition-colors cursor-pointer">contacto@casaa10.com</p>
-                  </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8">
+              <div className="flex flex-col gap-4 bg-white p-8 rounded-[32px] shadow-sm border border-slate-100 hover:shadow-lg transition-shadow duration-500">
+                <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center shrink-0 mb-2">
+                  <Mail className="w-5 h-5 text-[#0a152e]" />
                 </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-sm">
-                    <Phone className="w-5 h-5 text-[#0a152e]" />
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-bold text-[#0a152e] uppercase tracking-widest mb-1">Teléfono</h3>
-                    <p className="text-slate-500 text-lg hover:text-blue-600 transition-colors cursor-pointer">+52 1 56 3358 5933</p>
-                  </div>
+                <div>
+                  <h3 className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1">Correo</h3>
+                  <a href="mailto:contacto@casaa10.com" className="text-[#0a152e] text-lg font-medium hover:text-blue-600 transition-colors">contacto@casaa10.com</a>
                 </div>
+              </div>
+              
+              <div className="flex flex-col gap-4 bg-white p-8 rounded-[32px] shadow-sm border border-slate-100 hover:shadow-lg transition-shadow duration-500">
+                <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center shrink-0 mb-2">
+                  <Phone className="w-5 h-5 text-[#0a152e]" />
+                </div>
+                <div>
+                  <h3 className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1">Teléfono</h3>
+                  <a href="tel:+5215633585933" className="text-[#0a152e] text-lg font-medium hover:text-blue-600 transition-colors">+52 1 56 3358 5933</a>
+                </div>
+              </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-sm">
-                    <MapPin className="w-5 h-5 text-[#0a152e]" />
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-bold text-[#0a152e] uppercase tracking-widest mb-1">Oficinas Centrales</h3>
-                    <p className="text-slate-500 text-lg leading-relaxed">
-                      Polanco, Miguel Hidalgo<br/>
-                      Ciudad de México, CDMX
-                    </p>
-                  </div>
+              <div className="flex flex-col gap-4 bg-white p-8 rounded-[32px] shadow-sm border border-slate-100 hover:shadow-lg transition-shadow duration-500 sm:col-span-2 lg:col-span-1">
+                <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center shrink-0 mb-2">
+                  <MapPin className="w-5 h-5 text-[#0a152e]" />
+                </div>
+                <div>
+                  <h3 className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1">Oficinas Centrales</h3>
+                  <p className="text-[#0a152e] text-lg font-medium leading-relaxed">
+                    Polanco, Miguel Hidalgo<br/>Ciudad de México, CDMX
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Banner Asesor */}
-            <div className="bg-[#0a152e] rounded-[32px] p-8 md:p-10 text-white relative overflow-hidden mt-auto shadow-2xl">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/3"></div>
-              <h3 className="text-2xl font-bold mb-3 relative z-10">¿Atención rápida?</h3>
-              <p className="text-blue-100 mb-8 relative z-10 leading-relaxed text-sm">
-                Escríbenos por WhatsApp y un asesor especializado te responderá en menos de 5 minutos.
+            <div className="bg-gradient-to-br from-[#0a152e] to-[#142a5c] rounded-[32px] p-10 text-white relative overflow-hidden shadow-2xl hover:scale-[1.02] transition-transform duration-500">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/3"></div>
+              <h3 className="text-2xl font-bold mb-3 relative z-10 tracking-tight">¿Atención rápida?</h3>
+              <p className="text-blue-100 mb-8 relative z-10 leading-relaxed text-sm font-light">
+                Contáctanos vía WhatsApp y un asesor especializado te responderá en minutos.
               </p>
               <button 
                 onClick={() => window.open(`https://wa.me/5215633585933?text=${encodeURIComponent("Hola, me gustaría recibir asesoría de Casa A10.")}`, "_blank")}
-                className="w-full bg-white text-[#0a152e] py-4 rounded-xl font-bold text-[13px] hover:bg-slate-50 transition-all active:scale-[0.98] flex justify-center items-center gap-2 relative z-10 shadow-lg"
+                className="w-full bg-white text-[#0a152e] py-4 rounded-2xl font-bold text-[13px] hover:bg-slate-50 transition-all active:scale-[0.98] flex justify-center items-center gap-2 relative z-10 shadow-lg"
               >
                 <MessageCircle className="w-4 h-4" />
-                Abrir WhatsApp
+                Contactar por WhatsApp
               </button>
             </div>
 
           </div>
 
-          {/* Columna Derecha: Formulario (Apple Style) */}
+          {/* Columna Derecha: Formulario (Apple Style Masterpiece) */}
           <div className="lg:col-span-7">
-            <div className="bg-white border border-slate-200/80 rounded-[40px] p-8 md:p-14 shadow-[0_30px_80px_rgba(0,0,0,0.04)] h-full flex flex-col justify-center">
+            <div className="bg-white border border-slate-100 rounded-[40px] p-8 md:p-14 shadow-xl shadow-slate-200/50 h-full flex flex-col justify-center relative overflow-hidden">
               
               {!isSuccess ? (
-                <>
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#0a152e] tracking-tight mb-2">Envíanos un mensaje</h2>
-                  <p className="text-slate-500 text-sm mb-10">Completa el formulario y te contactaremos en breve.</p>
+                <div className="relative z-10 animate-in fade-in duration-700">
+                  <h2 className="text-3xl md:text-4xl font-bold text-[#0a152e] tracking-tight mb-3">Envíanos un mensaje</h2>
+                  <p className="text-slate-500 text-sm md:text-base mb-12 font-light">Nos pondremos en contacto contigo lo antes posible.</p>
                   
                   <form onSubmit={handleFormSubmit} noValidate className="flex flex-col gap-6">
                     
-                    {/* Nombre y Teléfono en dos columnas */}
                     <div className="flex flex-col md:flex-row gap-6">
-                      <div className="flex flex-col gap-2 flex-1">
-                        <label className="text-xs font-bold text-[#0a152e] uppercase tracking-widest">Nombre Completo</label>
+                      <div className="flex flex-col gap-2 flex-1 relative group">
+                        <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest pl-1">Nombre Completo</label>
                         <input 
                           type="text" 
                           value={formData.name}
@@ -139,27 +136,26 @@ export default function ContactoPage() {
                             setFormData({...formData, name: e.target.value});
                             if (formErrors.name) setFormErrors({...formErrors, name: false});
                           }}
-                          className={`w-full px-5 py-4 bg-slate-50 border rounded-2xl text-[14px] text-slate-900 focus:outline-none focus:ring-1 focus:bg-white transition-all ${
-                            formErrors.name ? 'border-red-400 focus:ring-red-500' : 'border-slate-200 focus:ring-[#0a152e]'
+                          className={`w-full px-5 py-4 bg-slate-50/50 border rounded-2xl text-[14px] text-[#0a152e] focus:outline-none focus:ring-4 transition-all duration-300 ${
+                            formErrors.name ? 'border-red-400 focus:ring-red-500/20' : 'border-slate-200 focus:border-[#0a152e] focus:ring-[#0a152e]/10 hover:border-slate-300'
                           }`}
                         />
-                        {formErrors.name && <span className="text-red-500 text-[10px] font-bold uppercase tracking-wider ml-2 animate-in fade-in">Requerido</span>}
+                        {formErrors.name && <span className="absolute -bottom-5 left-2 text-red-500 text-[10px] font-bold uppercase tracking-wider animate-in fade-in slide-in-from-top-1">Requerido</span>}
                       </div>
 
-                      <div className="flex flex-col gap-2 flex-1">
-                        <label className="text-xs font-bold text-[#0a152e] uppercase tracking-widest">Teléfono (Opcional)</label>
+                      <div className="flex flex-col gap-2 flex-1 relative group">
+                        <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest pl-1">Teléfono (Opcional)</label>
                         <input 
                           type="tel" 
                           value={formData.phone}
                           onChange={e => setFormData({...formData, phone: e.target.value})}
-                          className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-2xl text-[14px] text-slate-900 focus:outline-none focus:ring-1 focus:ring-[#0a152e] focus:bg-white transition-all"
+                          className="w-full px-5 py-4 bg-slate-50/50 border border-slate-200 rounded-2xl text-[14px] text-[#0a152e] focus:outline-none focus:ring-4 focus:border-[#0a152e] focus:ring-[#0a152e]/10 hover:border-slate-300 transition-all duration-300"
                         />
                       </div>
                     </div>
 
-                    {/* Correo */}
-                    <div className="flex flex-col gap-2">
-                      <label className="text-xs font-bold text-[#0a152e] uppercase tracking-widest">Correo Electrónico</label>
+                    <div className="flex flex-col gap-2 relative group mt-2">
+                      <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest pl-1">Correo Electrónico</label>
                       <input 
                         type="email" 
                         value={formData.email}
@@ -167,16 +163,15 @@ export default function ContactoPage() {
                           setFormData({...formData, email: e.target.value});
                           if (formErrors.email) setFormErrors({...formErrors, email: false});
                         }}
-                        className={`w-full px-5 py-4 bg-slate-50 border rounded-2xl text-[14px] text-slate-900 focus:outline-none focus:ring-1 focus:bg-white transition-all ${
-                          formErrors.email ? 'border-red-400 focus:ring-red-500' : 'border-slate-200 focus:ring-[#0a152e]'
+                        className={`w-full px-5 py-4 bg-slate-50/50 border rounded-2xl text-[14px] text-[#0a152e] focus:outline-none focus:ring-4 transition-all duration-300 ${
+                          formErrors.email ? 'border-red-400 focus:ring-red-500/20' : 'border-slate-200 focus:border-[#0a152e] focus:ring-[#0a152e]/10 hover:border-slate-300'
                         }`}
                       />
-                      {formErrors.email && <span className="text-red-500 text-[10px] font-bold uppercase tracking-wider ml-2 animate-in fade-in">Requerido</span>}
+                      {formErrors.email && <span className="absolute -bottom-5 left-2 text-red-500 text-[10px] font-bold uppercase tracking-wider animate-in fade-in slide-in-from-top-1">Requerido</span>}
                     </div>
 
-                    {/* Mensaje */}
-                    <div className="flex flex-col gap-2">
-                      <label className="text-xs font-bold text-[#0a152e] uppercase tracking-widest">¿En qué podemos ayudarte?</label>
+                    <div className="flex flex-col gap-2 relative group mt-2">
+                      <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest pl-1">¿En qué podemos ayudarte?</label>
                       <textarea 
                         rows={4}
                         value={formData.message}
@@ -184,31 +179,31 @@ export default function ContactoPage() {
                           setFormData({...formData, message: e.target.value});
                           if (formErrors.message) setFormErrors({...formErrors, message: false});
                         }}
-                        className={`w-full px-5 py-4 bg-slate-50 border rounded-2xl text-[14px] text-slate-900 focus:outline-none focus:ring-1 focus:bg-white transition-all resize-none ${
-                          formErrors.message ? 'border-red-400 focus:ring-red-500' : 'border-slate-200 focus:ring-[#0a152e]'
+                        className={`w-full px-5 py-4 bg-slate-50/50 border rounded-2xl text-[14px] text-[#0a152e] focus:outline-none focus:ring-4 transition-all duration-300 resize-none ${
+                          formErrors.message ? 'border-red-400 focus:ring-red-500/20' : 'border-slate-200 focus:border-[#0a152e] focus:ring-[#0a152e]/10 hover:border-slate-300'
                         }`}
                       ></textarea>
-                      {formErrors.message && <span className="text-red-500 text-[10px] font-bold uppercase tracking-wider ml-2 animate-in fade-in">Requerido</span>}
+                      {formErrors.message && <span className="absolute -bottom-5 left-2 text-red-500 text-[10px] font-bold uppercase tracking-wider animate-in fade-in slide-in-from-top-1">Requerido</span>}
                     </div>
 
-                    <button type="submit" disabled={isSubmitting} className="w-full mt-4 bg-[#0a152e] text-white py-5 rounded-2xl font-bold text-[14px] hover:bg-[#1a3668] transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2 shadow-[0_10px_30px_rgba(10,21,46,0.2)]">
+                    <button type="submit" disabled={isSubmitting} className="w-full mt-6 bg-[#0a152e] text-white py-4 md:py-5 rounded-2xl font-bold text-[13px] hover:bg-[#1a3668] transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2 shadow-[0_10px_30px_rgba(10,21,46,0.2)] group/btn">
                       {isSubmitting ? (
                         <svg className="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
                       ) : (
-                        <>Enviar Mensaje <ArrowRight className="w-4 h-4"/></>
+                        <>Enviar Mensaje <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"/></>
                       )}
                     </button>
 
                   </form>
-                </>
+                </div>
               ) : (
-                <div className="h-full flex flex-col items-center justify-center text-center animate-in zoom-in duration-500 py-20">
-                  <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mb-8 shadow-sm">
-                    <Check className="w-10 h-10 text-emerald-600" />
+                <div className="h-full flex flex-col items-center justify-center text-center animate-in zoom-in duration-700 py-20 relative z-10">
+                  <div className="w-24 h-24 bg-emerald-50 rounded-full flex items-center justify-center mb-8 shadow-inner">
+                    <Check className="w-12 h-12 text-emerald-600" />
                   </div>
-                  <h3 className="text-3xl font-bold text-[#0a152e] mb-4">¡Gracias por escribirnos!</h3>
-                  <p className="text-slate-500 text-lg max-w-sm mx-auto mb-10">Hemos recibido tu mensaje correctamente. Un asesor de Casa A10 te contactará a la brevedad.</p>
-                  <button onClick={() => { setIsSuccess(false); setFormData({name: "", email: "", phone: "", message: ""}); }} className="px-8 py-3 bg-slate-100 text-[#0a152e] rounded-full font-bold text-sm hover:bg-slate-200 transition-colors">
+                  <h3 className="text-3xl md:text-4xl font-bold text-[#0a152e] mb-4 tracking-tight">Mensaje enviado</h3>
+                  <p className="text-slate-500 text-lg md:text-xl max-w-sm mx-auto mb-12 font-light">Un asesor de Casa A10 se pondrá en contacto contigo muy pronto.</p>
+                  <button onClick={() => { setIsSuccess(false); setFormData({name: "", email: "", phone: "", message: ""}); }} className="px-8 py-4 bg-slate-50 text-[#0a152e] rounded-full font-bold text-[13px] hover:bg-slate-100 transition-colors active:scale-95 shadow-sm border border-slate-200">
                     Enviar otro mensaje
                   </button>
                 </div>
@@ -219,8 +214,9 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      {/* Mapa de Contacto */}
-      <section className="w-full h-[500px] mt-12 bg-slate-200">
+      {/* Mapa de Contacto Ultra Ancho */}
+      <section className="w-full h-[500px] mt-12 bg-slate-200 relative overflow-hidden group">
+        <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-700 pointer-events-none"></div>
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.661168128456!2d-99.20014022394142!3d19.432607181848523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d202027e0a4f5d%3A0xc6fb694a5e01b7a4!2sPolanco%2C%20Miguel%20Hidalgo%2C%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx" 
           width="100%" 
@@ -229,6 +225,7 @@ export default function ContactoPage() {
           allowFullScreen={true} 
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"
+          className="grayscale-[0.3] contrast-125"
         ></iframe>
       </section>
       
