@@ -65,12 +65,12 @@ export default function Navbar() {
         <div className="hidden md:grid grid-cols-3 items-center px-6 py-2 max-w-7xl mx-auto">
           {/* Izquierda: Redes/Contacto */}
           <div className="flex items-center justify-start gap-5">
-            <a href="tel:+5215633585933" className="group p-2 -ml-2 rounded-full transition-colors hover:bg-slate-200/20">
+            <a href="tel:+5215633585933" className={`group p-2 -ml-2 rounded-full transition-colors ${(!mobileMenuOpen && (isLightNav || (isScrolled && !isDetail))) ? 'text-[#0a152e] hover:bg-slate-100' : 'text-white hover:bg-slate-200/20'}`}>
               <svg className="w-[18px] h-[18px] transition-transform group-active:scale-95" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
               </svg>
             </a>
-            <a href="mailto:contacto@casaa10.com" className="group p-2 rounded-full transition-colors hover:bg-slate-200/20">
+            <a href="mailto:contacto@casaa10.com" className={`group p-2 rounded-full transition-colors ${(!mobileMenuOpen && (isLightNav || (isScrolled && !isDetail))) ? 'text-[#0a152e] hover:bg-slate-100' : 'text-white hover:bg-slate-200/20'}`}>
               <svg className="w-[19px] h-[19px] transition-transform group-active:scale-95" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="4.5" width="20" height="15" rx="3" />
                 <path d="M2 5.5l9.2 6.5a1.5 1.5 0 001.6 0L22 5.5" />
@@ -88,7 +88,7 @@ export default function Navbar() {
                 height={70} 
                 className="transition-all duration-200 object-contain cursor-pointer"
                 style={{
-                  filter: (!mobileMenuOpen && isScrolled && !isDetail) ? 'none' : 'brightness(0) invert(1)'
+                  filter: (!mobileMenuOpen && (isLightNav || (isScrolled && !isDetail))) ? 'brightness(0)' : 'brightness(0) invert(1)'
                 }}
                 priority
               />
@@ -98,9 +98,9 @@ export default function Navbar() {
           {/* Derecha: Contacto */}
           <div className="flex justify-end">
             <Link href="/contacto" className={`group flex items-center gap-2.5 px-5 py-2.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-sm active:scale-95 ${
-              (!mobileMenuOpen && isScrolled && !isDetail)
-                ? "bg-[#0f2146] text-white hover:bg-[#1a3668] shadow-[0_4px_10px_rgba(15,33,70,0.15)]" 
-                : "bg-white text-[#0f2146] hover:bg-white/90 shadow-[0_4px_10px_rgba(0,0,0,0.1)]"
+              (!mobileMenuOpen && (isLightNav || (isScrolled && !isDetail)))
+                ? "bg-[#0a152e] text-white hover:bg-[#1a3668] shadow-[0_4px_10px_rgba(10,21,46,0.15)]" 
+                : "bg-white text-[#0a152e] hover:bg-white/90 shadow-[0_4px_10px_rgba(0,0,0,0.1)]"
             }`}>
               Contáctanos
               <svg className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -171,7 +171,7 @@ export default function Navbar() {
               height={60} 
               className="object-contain"
               style={{
-                filter: (!mobileMenuOpen && isScrolled && !isDetail) ? 'none' : 'brightness(0) invert(1)'
+                filter: (!mobileMenuOpen && (isLightNav || (isScrolled && !isDetail))) ? 'brightness(0)' : 'brightness(0) invert(1)'
               }}
               priority
             />
