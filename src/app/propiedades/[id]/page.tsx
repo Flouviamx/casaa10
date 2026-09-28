@@ -456,8 +456,8 @@ export default function PropertyDetailPage({ params }: { params: Promise<{ id: s
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-0.5">Desde</span>
                     <span className="font-bold text-[#0a152e]">${prop.price.toLocaleString('en-US')}</span>
                   </div>
-                  <span className="text-xs font-bold text-blue-600 flex items-center gap-1 hover:text-blue-700 transition-colors">
-                    ver desarrollo <ArrowUpRight className="w-3.5 h-3.5" />
+                  <span className="px-4 py-2 bg-[#0a152e] text-white rounded-full text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5 hover:bg-[#1a3668] transition-all shadow-[0_4px_10px_rgba(10,21,46,0.15)] group-hover:shadow-[0_6px_15px_rgba(10,21,46,0.2)] group-hover:-translate-y-0.5">
+                    Ver desarrollo <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </span>
                 </div>
               </div>

@@ -53,7 +53,7 @@ export default function PropertyGrid({ properties }: PropertyGridProps) {
 
               {/* Content */}
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-[#0a152e] mb-1 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold text-[#0a152e] mb-1 group-hover:text-slate-600 transition-colors">
                   {prop.title}
                 </h3>
                 <p className="text-sm text-slate-500 mb-4 flex items-center gap-1.5">

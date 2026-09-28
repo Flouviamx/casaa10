@@ -70,7 +70,7 @@ export default function ContactoPage() {
                 </div>
                 <div>
                   <h3 className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1">Correo</h3>
-                  <a href="mailto:contacto@casaa10.com" className="text-[#0a152e] text-lg font-medium hover:text-blue-600 transition-colors">contacto@casaa10.com</a>
+                  <a href="mailto:contacto@casaa10.com" className="text-[#0a152e] text-lg font-medium hover:text-slate-600 transition-colors">contacto@casaa10.com</a>
                 </div>
               </div>
               
@@ -80,7 +80,7 @@ export default function ContactoPage() {
                 </div>
                 <div>
                   <h3 className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1">Teléfono</h3>
-                  <a href="tel:+5215633585933" className="text-[#0a152e] text-lg font-medium hover:text-blue-600 transition-colors">+52 1 56 3358 5933</a>
+                  <a href="tel:+5215633585933" className="text-[#0a152e] text-lg font-medium hover:text-slate-600 transition-colors">+52 1 56 3358 5933</a>
                 </div>
               </div>
 
