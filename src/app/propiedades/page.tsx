@@ -8,11 +8,11 @@ export default function PropiedadesPage() {
     <main className="min-h-screen bg-slate-50 font-sans selection:bg-[#0f2146] selection:text-white">
       <Navbar />
       
-      {/* Navbar Background Placeholder */}
-      <div className="w-full h-[100px] bg-[#0a152e]"></div>
-
-      {/* Catálogo Interactivo */}
-      <Catalog />
+      {/* Spacer para que el catálogo no quede debajo de la navbar fija */}
+      <div className="pt-[160px] md:pt-[180px]">
+        {/* Catálogo Interactivo */}
+        <Catalog />
+      </div>
 
       <Footer />
     </main>
