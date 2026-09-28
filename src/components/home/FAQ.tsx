@@ -48,7 +48,7 @@ export default function FAQ() {
                 onClick={() => toggleFAQ(index)}
                 className="w-full py-6 flex items-center justify-between text-left group"
               >
-                <span className="text-base md:text-lg font-bold text-[#0a152e] pr-8 group-hover:text-blue-600 transition-colors">
+                <span className="text-base md:text-lg font-bold text-[#0a152e] pr-8 group-hover:text-slate-600 transition-colors">
                   {faq.question}
                 </span>
                 <div className={`shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${
