@@ -216,8 +216,8 @@ export default function PropertyDetailPage({ params }: { params: Promise<{ id: s
               </p>
             </div>
 
-                        {/* Secciones de Características (Superficies, Servicios, Espacios, Adicionales) */}
-            <div className="flex flex-col gap-12 mb-16">
+            {/* Secciones de Características (Superficies, Servicios, Espacios, Adicionales) */}
+            <div className="flex flex-col gap-12 mb-16 mt-16 pt-8 border-t border-slate-100">
               
               {/* Superficies */}
               <div>
