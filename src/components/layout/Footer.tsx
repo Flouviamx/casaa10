@@ -241,6 +241,8 @@ export default function Footer() {
           </div>
         </div>
 
+        </div>
+
         {/* BOTTOM COPYRIGHT */}
         <div className="pt-8 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
