@@ -10,6 +10,7 @@ import Philosophy from "@/components/home/Philosophy";
 import FeaturedProperties from "@/components/home/FeaturedProperties";
 import Process from "@/components/home/Process";
 import InstagramFeed from "@/components/home/InstagramFeed";
+import FAQ from "@/components/home/FAQ";
 
 export default function Home() {
   const [isSearching, setIsSearching] = useState(false);
@@ -30,6 +31,7 @@ export default function Home() {
       <FeaturedProperties />
       <Process />
       <InstagramFeed />
+      <FAQ />
       <Footer />
     </main>
   );
