@@ -32,7 +32,17 @@ export default function Navbar() {
   
   const navLinks = [
     { name: "Inicio", path: "/" },
-    { name: "Propiedades", path: "/propiedades" },
+    { 
+      name: "Desarrollos", 
+      path: "/propiedades",
+      dropdown: [
+        { name: "Todos los desarrollos", path: "/propiedades" },
+        { name: "Últimos departamentos", path: "/propiedades" },
+        { name: "Entrega inmediata", path: "/propiedades" },
+        { name: "Preventa", path: "/propiedades" },
+        { name: "Renta", path: "/propiedades" }
+      ]
+    },
     { name: "Contacto", path: "/contacto" },
     { name: "Nosotros", path: "/nosotros" }
   ];
@@ -103,20 +113,44 @@ export default function Navbar() {
           <div className="flex justify-center gap-2 text-xs font-medium tracking-[0.15em] uppercase max-w-7xl mx-auto">
             {navLinks.map((item) => {
               const isActive = pathname === item.path;
+              const linkClasses = `px-6 py-2.5 rounded-full transition-all duration-300 ${
+                isActive 
+                  ? (!mobileMenuOpen && isScrolled && !isDetail)
+                      ? "bg-slate-100 text-[#0f2146] shadow-sm font-bold" 
+                      : "bg-white/20 text-white font-bold backdrop-blur-md" 
+                  : (!mobileMenuOpen && isScrolled && !isDetail)
+                      ? "hover:bg-slate-50 text-slate-500 hover:text-[#0f2146]" 
+                      : "hover:bg-white/10 text-white/70 hover:text-white" 
+              }`;
+
+              if (item.dropdown) {
+                return (
+                  <div key={item.name} className="relative group">
+                    <Link href={item.path} className={`${linkClasses} flex items-center gap-2`}>
+                      {item.name}
+                      <svg className="w-4 h-4 transition-transform duration-300 group-hover:-rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
+                    </Link>
+                    
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 z-50">
+                      <div className="bg-white rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] border border-slate-100 overflow-hidden w-64 py-2 flex flex-col normal-case tracking-normal">
+                        {item.dropdown.map((sub, i) => (
+                          <Link 
+                            key={sub.name}
+                            href={sub.path}
+                            className={`px-6 py-3 text-[14px] font-medium transition-colors hover:bg-slate-50 flex items-center relative ${i === 0 ? "text-[#0f2146]" : "text-slate-600 hover:text-[#0f2146]"}`}
+                          >
+                            {i === 0 && <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-[#0f2146] rounded-r-full"></div>}
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
               return (
-                <Link 
-                  key={item.name} 
-                  href={item.path} 
-                  className={`px-6 py-2.5 rounded-full transition-all duration-300 ${
-                    isActive 
-                      ? (!mobileMenuOpen && isScrolled && !isDetail)
-                          ? "bg-slate-100 text-[#0f2146] shadow-sm font-bold" 
-                          : "bg-white/20 text-white font-bold backdrop-blur-md" 
-                      : (!mobileMenuOpen && isScrolled && !isDetail)
-                          ? "hover:bg-slate-50 text-slate-500 hover:text-[#0f2146]" 
-                          : "hover:bg-white/10 text-white/70 hover:text-white" 
-                  }`}
-                >
+                <Link key={item.name} href={item.path} className={linkClasses}>
                   {item.name}
                 </Link>
               );
