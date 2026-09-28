@@ -8,15 +8,8 @@ export default function PropiedadesPage() {
     <main className="min-h-screen bg-slate-50 font-sans selection:bg-[#0f2146] selection:text-white">
       <Navbar />
       
-      {/* Hero Oscuro */}
-      <section className="relative w-full pt-48 pb-32 px-6 bg-[#0a152e] flex flex-col items-center justify-center text-center">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6">
-          Propiedades
-        </h1>
-        <p className="text-slate-400 max-w-2xl text-lg font-light">
-          Descubre nuestro portafolio de exclusivas propiedades en las mejores zonas.
-        </p>
-      </section>
+      {/* Navbar Background Placeholder */}
+      <div className="w-full h-[100px] bg-[#0a152e]"></div>
 
       {/* Catálogo Interactivo */}
       <Catalog />
