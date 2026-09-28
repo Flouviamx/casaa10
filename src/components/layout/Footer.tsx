@@ -156,7 +156,7 @@ export default function Footer({ theme = 'dark' }: { theme?: 'dark' | 'light' })
                 alt="CASA A10" 
                 width={120} 
                 height={120} 
-                className="brightness-0 invert object-contain"
+                className={`object-contain transition-all duration-300 ${theme === 'light' ? 'brightness-0' : 'brightness-0 invert'}`}
               />
             </div>
             
