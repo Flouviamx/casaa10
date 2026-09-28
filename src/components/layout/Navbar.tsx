@@ -43,7 +43,6 @@ export default function Navbar() {
         { name: "Renta", path: "/propiedades" }
       ]
     },
-    { name: "Contacto", path: "/contacto" },
     { name: "Nosotros", path: "/nosotros" }
   ];
 
