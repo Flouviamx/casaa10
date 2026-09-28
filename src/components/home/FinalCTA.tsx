@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 export default function FinalCTA() {
   return (
-      <section className="relative py-32 px-6 overflow-hidden">
+      <section className="relative py-16 md:py-20 px-6 overflow-hidden">
         {/* Abstract shapes/gradient */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-slate-100 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 -translate-y-1/2 translate-x-1/3"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate-100 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 translate-y-1/3 -translate-x-1/3"></div>

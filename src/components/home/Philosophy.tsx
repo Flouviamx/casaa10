@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 export default function Philosophy() {
   return (
-      <section className="py-32 px-6">
+      <section className="py-16 md:py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20 max-w-4xl mx-auto">
             <motion.h2 

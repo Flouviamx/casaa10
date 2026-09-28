@@ -8,7 +8,7 @@ interface HeroProps {
 
 export default function Hero({ isSearching, setIsSearching }: HeroProps) {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-16">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-10">
       {/* Background Image Placeholder */}
       <div className="absolute inset-0 bg-slate-400 z-0 flex items-end justify-start p-6 md:p-12">
         <span className="text-slate-200/50 font-medium tracking-widest uppercase text-xs md:text-sm">[ Espacio para fotografía arquitectónica ]</span>

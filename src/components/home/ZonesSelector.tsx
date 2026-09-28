@@ -66,7 +66,7 @@ export default function ZonesSelector() {
   const paddingFormula = "max(24px, calc(50vw - 616px))";
 
   return (
-    <section className="py-24 overflow-hidden">
+    <section className="py-16 overflow-hidden">
       
       {/* Header Section */}
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">

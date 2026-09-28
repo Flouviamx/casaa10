@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 export default function InstagramFeed() {
   return (
-      <section className="py-24 px-6">
+      <section className="py-12 md:py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
             <div className="text-center md:text-left">

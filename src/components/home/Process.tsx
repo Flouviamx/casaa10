@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 export default function Process() {
   return (
-      <section className="py-32 px-6">
+      <section className="py-16 md:py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-sm font-bold text-slate-400 tracking-[0.2em] uppercase mb-4">Nuestra Metodología</h2>

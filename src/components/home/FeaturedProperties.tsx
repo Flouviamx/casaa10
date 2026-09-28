@@ -7,7 +7,7 @@ export default function FeaturedProperties() {
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ['start center', 'end center'] });
   const height = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
   return (
-      <section className="py-32 px-6 max-w-7xl mx-auto">
+      <section className="py-16 md:py-20 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-5xl font-bold text-[#0f2146] mb-6">Propiedades</h2>
