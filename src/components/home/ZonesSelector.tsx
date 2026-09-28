@@ -61,14 +61,9 @@ function ZoneCard({ zone }: { zone: Zone }) {
 export default function ZonesSelector() {
   const [activeCity, setActiveCity] = useState<City>("Ciudad de México");
 
-  // max-w-7xl = 1280px.
-  // Half of remaining viewport width = 50vw - 640px.
-  // Plus 24px of padding we want = 50vw - 616px.
-  // Minimum padding is 24px.
+  // Cálculo preciso del padding para alinear con el contenedor max-w-7xl
+  // 50vw - 640px (mitad de 1280px) + 24px de padding = 50vw - 616px
   const paddingFormula = "max(24px, calc(50vw - 616px))";
-  
-  // Right spacer compensates for the 16px (1rem) margin-right on the last card
-  const paddingRightFormula = "calc(max(24px, calc(50vw - 616px)) - 16px)";
 
   return (
     <section className="py-24 overflow-hidden">
@@ -111,22 +106,23 @@ export default function ZonesSelector() {
       {/* Full Bleed Carousel Container */}
       <div className="w-full">
         <motion.div 
-          key={activeCity} // Fuerza re-animación al cambiar de ciudad
+          key={activeCity}
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.4 }}
-          className="flex overflow-x-auto pb-8 snap-x snap-mandatory hide-scrollbar"
+          className="flex overflow-x-auto pb-12 pt-4 snap-x snap-mandatory hide-scrollbar"
+          style={{ scrollPaddingLeft: paddingFormula }}
         >
-          {/* Espaciador Izquierdo (100% robusto) */}
-          <div className="shrink-0 h-[1px]" style={{ width: paddingFormula }} />
+          {/* Este div vacío simula el padding izquierdo pero permitiendo que el contenido flote visualmente al hacer scroll */}
+          <div className="shrink-0" style={{ width: paddingFormula }}></div>
 
           {/* Cards */}
           {ZONES_DATA[activeCity].map((zone, idx) => (
             <ZoneCard key={idx} zone={zone} />
           ))}
           
-          {/* Espaciador Derecho (100% robusto) */}
-          <div className="shrink-0 h-[1px]" style={{ width: paddingRightFormula }} />
+          {/* Espaciador Derecho */}
+          <div className="shrink-0" style={{ width: paddingFormula }}></div>
         </motion.div>
 
         {/* Action Button */}
