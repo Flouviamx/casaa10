@@ -23,7 +23,7 @@ export default function FeaturedProperties() {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="flex overflow-x-auto md:grid md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 snap-x snap-mandatory scroll-smooth hide-scrollbar pb-8 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0">
           {[
             { zone: "Pedregal", type: "Casa en Venta", id: 1 },
             { zone: "Coyoacán", type: "Casa en Venta", id: 2 },
@@ -44,7 +44,7 @@ export default function FeaturedProperties() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group cursor-pointer"
+              className="group cursor-pointer shrink-0 w-[80vw] sm:w-[45vw] md:w-auto snap-center md:snap-align-none"
             >
               <div className="w-full aspect-[4/5] bg-slate-200 rounded-[24px] mb-5 relative overflow-hidden flex items-center justify-center">
                 <span className="text-slate-400 text-xs font-medium tracking-widest uppercase z-10">[ Foto {prop.zone} ]</span>
