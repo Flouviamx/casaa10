@@ -38,26 +38,16 @@ export default function ContactoPage() {
     <main className="min-h-screen bg-slate-50 font-sans selection:bg-[#0a152e] selection:text-white flex flex-col">
       <Navbar />
       
-      {/* Hero Section Apple Style (Dark Mode to contrast Navbar) */}
-      <section className="relative pt-48 pb-32 md:pb-40 px-6 md:px-12 bg-[#0a152e] overflow-hidden rounded-b-[40px] md:rounded-b-[80px] shadow-2xl">
-        {/* Glows y Luces */}
-        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-blue-500/20 blur-[120px] pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-[800px] h-[600px] rounded-full bg-indigo-500/10 blur-[150px] pointer-events-none"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 pointer-events-none mix-blend-overlay"></div>
-
-        <div className="max-w-[1400px] mx-auto relative z-10 flex flex-col items-center text-center">
-          <span className="text-xs md:text-sm font-bold text-blue-400 uppercase tracking-[0.25em] mb-6 block">Hablemos</span>
-          <h1 className="text-5xl md:text-[80px] font-bold text-white tracking-tight leading-[1.05] max-w-4xl mb-8">
-            Comienza a construir<br className="hidden md:block" /> tu patrimonio.
-          </h1>
-          <p className="text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed font-light">
-            Nuestros asesores patrimoniales están listos para brindarte una experiencia a la altura de tus expectativas.
-          </p>
-        </div>
-      </section>
-
       {/* Main Content */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-20 flex-1 w-full">
+      <section className="max-w-[1400px] mx-auto px-6 md:px-12 pt-[160px] md:pt-[180px] pb-20 flex-1 w-full">
+        
+        <div className="mb-16 md:mb-24">
+          <span className="text-xs font-bold text-[#0a152e]/50 uppercase tracking-widest mb-4 block">Hablemos</span>
+          <h1 className="text-4xl md:text-6xl font-bold text-[#0a152e] tracking-tight leading-tight max-w-3xl">
+            Comienza a construir tu patrimonio.
+          </h1>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
           
           {/* Columna Izquierda: Info de Contacto */}

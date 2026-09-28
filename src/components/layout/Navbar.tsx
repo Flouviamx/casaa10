@@ -28,7 +28,7 @@ export default function Navbar() {
     return () => { document.body.style.overflow = 'auto'; }
   }, [mobileMenuOpen]);
 
-  const isDetail = pathname === '/propiedades' || pathname.startsWith('/propiedades/');
+  const isDetail = pathname === '/propiedades' || pathname.startsWith('/propiedades/') || pathname === '/contacto';
   
   const navLinks = [
     { name: "Inicio", path: "/" },
