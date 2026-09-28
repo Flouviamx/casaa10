@@ -138,7 +138,7 @@ export default function Navbar() {
                             href={sub.path}
                             className={`px-6 py-3 text-[14px] font-medium transition-colors hover:bg-slate-50 flex items-center relative ${i === 0 ? "text-[#0f2146]" : "text-slate-600 hover:text-[#0f2146]"}`}
                           >
-                            {i === 0 && <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-[#0f2146] rounded-r-full"></div>}
+                            
                             {sub.name}
                           </Link>
                         ))}
