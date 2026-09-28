@@ -49,7 +49,6 @@ export default function ContactoPage() {
           
           {/* Columna Izquierda: Copy y Beneficios */}
           <div className="lg:col-span-5 flex flex-col pt-4">
-            <span className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-6 block">Hablemos</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1] mb-6">
               Comienza a construir<br/>tu patrimonio
             </h1>
