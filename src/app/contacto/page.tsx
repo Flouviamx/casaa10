@@ -47,7 +47,7 @@ export default function ContactoPage() {
 
         <div className="max-w-[1400px] mx-auto relative z-10 flex flex-col items-center text-center">
           <span className="text-xs md:text-sm font-bold text-blue-400 uppercase tracking-[0.25em] mb-6 block">Hablemos</span>
-          <h1 className="text-5xl md:text-[80px] font-bold text-white tracking-tighter leading-[1.05] max-w-4xl mb-8">
+          <h1 className="text-5xl md:text-[80px] font-bold text-white tracking-tight leading-[1.05] max-w-4xl mb-8">
             Comienza a construir<br className="hidden md:block" /> tu patrimonio.
           </h1>
           <p className="text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed font-light">

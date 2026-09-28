@@ -8,7 +8,7 @@ export default function UbicacionesPage() {
       <Navbar />
       
       <section className="relative w-full pt-48 pb-32 px-6 bg-[#0a152e] flex flex-col items-center justify-center text-center">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-6">
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6">
           Ubicaciones
         </h1>
         <p className="text-slate-400 max-w-2xl text-lg font-light">
