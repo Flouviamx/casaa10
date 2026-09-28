@@ -1,6 +1,7 @@
 "use client";
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
+import { ArrowRight } from 'lucide-react';
 import { useScroll, useTransform } from 'framer-motion';
 export default function FeaturedProperties() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -16,8 +17,9 @@ export default function FeaturedProperties() {
               Encontramos el espacio correcto para ti en las mejores zonas.
             </p>
           </div>
-          <button className="text-[#0f2146] font-semibold border-b-2 border-[#0f2146] pb-1 hover:text-slate-600 hover:border-slate-600 transition-colors">
-            Ver todas las propiedades &rarr;
+          <button className="group flex items-center gap-2 px-6 py-3.5 bg-white border border-slate-200 rounded-full text-[13px] font-bold text-[#0a152e] shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-slate-300 transition-all active:scale-95">
+            Ver todas las propiedades
+            <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-[#0a152e] group-hover:translate-x-1 transition-all" />
           </button>
         </div>
 
