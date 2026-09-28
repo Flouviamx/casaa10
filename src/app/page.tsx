@@ -9,7 +9,6 @@ import ZonesSelector from "@/components/home/ZonesSelector";
 import Philosophy from "@/components/home/Philosophy";
 import FeaturedProperties from "@/components/home/FeaturedProperties";
 import Process from "@/components/home/Process";
-import FinalCTA from "@/components/home/FinalCTA";
 import InstagramFeed from "@/components/home/InstagramFeed";
 
 export default function Home() {
@@ -30,7 +29,6 @@ export default function Home() {
       <Philosophy />
       <FeaturedProperties />
       <Process />
-      <FinalCTA />
       <InstagramFeed />
       <Footer />
     </main>
