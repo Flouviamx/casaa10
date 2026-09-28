@@ -315,7 +315,7 @@ export default function PropertyDetailPage({ params }: { params: Promise<{ id: s
 
           {/* Sidebar / Formulario de Contacto (Sticky) - Apple Level */}
           <div className="lg:col-span-4 relative">
-            <div className="sticky top-32 bg-white rounded-3xl border border-slate-100/50 shadow-[0_8px_30px_rgba(0,0,0,0.04)] p-8">
+            <div className="sticky top-48 bg-white rounded-3xl border border-slate-100/50 shadow-[0_8px_30px_rgba(0,0,0,0.04)] p-8">
               
               <div className="mb-8">
                 <span className="block text-xs text-slate-400 font-semibold uppercase tracking-widest mb-1">Precio de {property.operationType}</span>
