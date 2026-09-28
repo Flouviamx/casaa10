@@ -85,21 +85,23 @@ export default function ZonesSelector() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="bg-white rounded-full p-1.5 shadow-sm border border-slate-200 inline-flex mb-12"
+          className="w-full max-w-[100vw] px-6 flex justify-center mb-12"
         >
-          {CITIES.map((city) => (
-            <button
-              key={city}
-              onClick={() => setActiveCity(city)}
-              className={`px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-[0.15em] transition-all duration-300 ${
-                activeCity === city
-                  ? "bg-slate-100 text-[#0a152e] shadow-sm"
-                  : "text-slate-400 hover:text-[#0a152e] hover:bg-slate-50"
-              }`}
-            >
-              {city}
-            </button>
-          ))}
+          <div className="bg-white border border-slate-200 rounded-full p-1 md:p-1.5 flex overflow-x-auto hide-scrollbar shadow-sm snap-x snap-mandatory">
+            {CITIES.map(city => (
+              <button 
+                key={city}
+                onClick={() => setActiveCity(city)}
+                className={`shrink-0 whitespace-nowrap px-4 md:px-6 py-2 md:py-2.5 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-wider md:tracking-[0.15em] transition-all duration-300 snap-center ${
+                  activeCity === city
+                    ? "bg-slate-100 text-[#0a152e] shadow-sm"
+                    : "text-slate-400 hover:text-[#0a152e] hover:bg-slate-50"
+                }`}
+              >
+                {city}
+              </button>
+            ))}
+          </div>
         </motion.div>
       </div>
 
