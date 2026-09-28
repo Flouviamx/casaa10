@@ -28,7 +28,7 @@ export default function Navbar() {
     return () => { document.body.style.overflow = 'auto'; }
   }, [mobileMenuOpen]);
 
-  const isDetail = pathname.startsWith('/propiedades/'); // Now it includes /propiedades page as well
+  const isDetail = pathname === '/propiedades' || pathname.startsWith('/propiedades/');
   
   const navLinks = [
     { name: "Inicio", path: "/" },
