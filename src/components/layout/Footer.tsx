@@ -75,7 +75,7 @@ export default function Footer({ theme = 'dark' }: { theme?: 'dark' | 'light' })
                 className={`px-6 py-3 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 ${
                   activeCity === city 
                     ? theme === 'light' ? 'bg-[#0a152e] text-white shadow-md scale-105' : 'bg-white text-[#0a152e] shadow-md scale-105' 
-                    : "${theme === 'light' ? 'bg-slate-100 border-slate-200 text-slate-500 hover:text-[#0a152e] hover:bg-slate-200' : 'bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:bg-white/10'}"
+                    : (theme === 'light' ? 'bg-slate-100 border-slate-200 text-slate-500 hover:text-[#0a152e] hover:bg-slate-200' : 'bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:bg-white/10')
                 }`}
               >
                 {city}
