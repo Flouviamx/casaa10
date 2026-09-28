@@ -1,0 +1,147 @@
+export type Property = {
+  id: number;
+  title: string;
+  location: string;
+  stateId: string;
+  zone: string;
+  propertyType: string;
+  operationType: string;
+  price: number;
+  beds: number;
+  baths: number;
+  parking: number;
+  sqft: number;
+  tag: string;
+  color: string;
+};
+
+export const properties: Property[] = [
+  {
+    id: 1,
+    title: "Penthouse Polanco",
+    location: "Polanco, CDMX",
+    stateId: "cdmx",
+    zone: "polanco",
+    propertyType: "departamento",
+    operationType: "venta",
+    price: 18500000,
+    beds: 3,
+    baths: 3.5,
+    parking: 3,
+    sqft: 240,
+    tag: "VENTA",
+    color: "bg-[#0f2146]",
+  },
+  {
+    id: 2,
+    title: "Residencial Bosques",
+    location: "Bosques de las Lomas, CDMX",
+    stateId: "cdmx",
+    zone: "bosques",
+    propertyType: "casa",
+    operationType: "venta",
+    price: 12000000,
+    beds: 4,
+    baths: 4,
+    parking: 2,
+    sqft: 320,
+    tag: "PREVENTA",
+    color: "bg-[#1a3668]",
+  },
+  {
+    id: 3,
+    title: "Torre Lomas",
+    location: "Lomas de Chapultepec, CDMX",
+    stateId: "cdmx",
+    zone: "lomas",
+    propertyType: "departamento",
+    operationType: "venta",
+    price: 22000000,
+    beds: 3,
+    baths: 3,
+    parking: 3,
+    sqft: 280,
+    tag: "ENTREGA INMEDIATA",
+    color: "bg-emerald-600",
+  },
+  {
+    id: 4,
+    title: "Terreno Temozón Norte",
+    location: "Temozón Norte, Mérida",
+    stateId: "merida",
+    zone: "temozon",
+    propertyType: "terreno",
+    operationType: "venta",
+    price: 6500000,
+    beds: 0,
+    baths: 0,
+    parking: 0,
+    sqft: 450,
+    tag: "TERRENO",
+    color: "bg-amber-600",
+  },
+  {
+    id: 5,
+    title: "Oficina Juriquilla Towers",
+    location: "Juriquilla, Querétaro",
+    stateId: "queretaro",
+    zone: "juriquilla",
+    propertyType: "oficina",
+    operationType: "renta",
+    price: 45000,
+    beds: 0,
+    baths: 2,
+    parking: 2,
+    sqft: 150,
+    tag: "RENTA",
+    color: "bg-blue-600",
+  },
+  {
+    id: 6,
+    title: "Casa Club Campanario",
+    location: "El Campanario, Querétaro",
+    stateId: "queretaro",
+    zone: "campanario",
+    propertyType: "casa",
+    operationType: "venta",
+    price: 15800000,
+    beds: 4,
+    baths: 4.5,
+    parking: 4,
+    sqft: 450,
+    tag: "VENTA",
+    color: "bg-[#0f2146]",
+  },
+  {
+    id: 7,
+    title: "Loft Condesa",
+    location: "Condesa, CDMX",
+    stateId: "cdmx",
+    zone: "condesa",
+    propertyType: "departamento",
+    operationType: "renta",
+    price: 35000,
+    beds: 1,
+    baths: 1,
+    parking: 1,
+    sqft: 90,
+    tag: "RENTA",
+    color: "bg-blue-600",
+  },
+  {
+    id: 8,
+    title: "Villa Altabrisa",
+    location: "Altabrisa, Mérida",
+    stateId: "merida",
+    zone: "altabrisa",
+    propertyType: "casa",
+    operationType: "venta",
+    price: 9400000,
+    beds: 4,
+    baths: 3,
+    parking: 3,
+    sqft: 300,
+    tag: "PREVENTA",
+    color: "bg-[#1a3668]",
+  }
+];
