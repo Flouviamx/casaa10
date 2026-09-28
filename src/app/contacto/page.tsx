@@ -190,7 +190,7 @@ export default function ContactoPage() {
         </div>
       </section>
       
-      <Footer />
+      <Footer theme="light" />
     </main>
   );
 }

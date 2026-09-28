@@ -44,7 +44,7 @@ const directoryData: Record<string, { title: string, links: string[] }[]> = {
   ]
 };
 
-export default function Footer() {
+export default function Footer({ theme = 'dark' }: { theme?: 'dark' | 'light' }) {
   const [activeCity, setActiveCity] = useState("Ciudad de México");
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
 
@@ -56,10 +56,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full relative z-20 bg-[#0a152e] mt-20 rounded-t-[40px] md:rounded-t-[80px] overflow-hidden text-white font-sans">
+    <footer className={`w-full relative z-20 mt-20 rounded-t-[40px] md:rounded-t-[80px] overflow-hidden font-sans transition-colors duration-500 ${theme === 'light' ? 'bg-white text-[#0a152e]' : 'bg-[#0a152e] text-white'}`}>
       
       {/* SECCIÓN DE DIRECTORIO SEO (Perfectamente integrada) */}
-      <div className="pt-24 pb-12 px-6 md:px-12 w-full max-w-[1400px] mx-auto relative z-10 border-b border-[#1a2b4c]">
+      <div className={`pt-24 pb-12 px-6 md:px-12 w-full max-w-[1400px] mx-auto relative z-10 border-b ${theme === 'light' ? 'border-slate-200' : 'border-[#1a2b4c]'}`}>
         <div className="max-w-6xl mx-auto">
           
           <h2 className="text-3xl md:text-5xl font-bold text-white text-center mb-10 tracking-tight">
