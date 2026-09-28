@@ -67,22 +67,20 @@ export default function Footer() {
           </h2>
           
           {/* Toggles de Ciudad */}
-          <div className="flex justify-center mb-16">
-            <div className="bg-white/5 border border-white/10 rounded-full p-1.5 inline-flex flex-wrap justify-center shadow-sm backdrop-blur-md">
-              {Object.keys(directoryData).map(city => (
-                <button 
-                  key={city}
-                  onClick={() => setActiveCity(city)}
-                  className={`px-6 py-2.5 rounded-full text-xs font-bold transition-all duration-300 ${
-                    activeCity === city 
-                      ? "bg-white text-[#0a152e] shadow-sm" 
-                      : "text-slate-400 hover:text-white hover:bg-white/10"
-                  }`}
-                >
-                  {city}
-                </button>
-              ))}
-            </div>
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-14">
+            {Object.keys(directoryData).map(city => (
+              <button 
+                key={city}
+                onClick={() => setActiveCity(city)}
+                className={`px-6 py-3 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 ${
+                  activeCity === city 
+                    ? "bg-white text-[#0a152e] shadow-md scale-105" 
+                    : "bg-white/5 border border-white/10 text-slate-400 hover:text-white hover:bg-white/10"
+                }`}
+              >
+                {city}
+              </button>
+            ))}
           </div>
 
           {/* Grid de Acordeones */}
