@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { Mail, Phone, MapPin, MessageCircle, ArrowRight, Check } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight, Check } from "lucide-react";
 import { useState } from "react";
 
 export default function ContactoPage() {
@@ -86,18 +86,7 @@ export default function ContactoPage() {
               </div>
             </div>
 
-            {/* WhatsApp Card Integrada */}
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md">
-              <h3 className="text-xl font-bold text-white mb-2 tracking-tight">¿Atención rápida?</h3>
-              <p className="text-slate-400 mb-6 text-sm">Contáctanos vía WhatsApp y un asesor especializado te responderá en minutos.</p>
-              <button 
-                onClick={() => window.open(`https://wa.me/5215633585933?text=${encodeURIComponent("Hola, me gustaría recibir asesoría de Casa A10.")}`, "_blank")}
-                className="w-full bg-white text-[#0a152e] py-3.5 rounded-full font-bold text-[13px] hover:bg-slate-100 transition-all active:scale-[0.98] flex justify-center items-center gap-2"
-              >
-                <MessageCircle className="w-4 h-4" />
-                Contactar por WhatsApp
-              </button>
-            </div>
+
           </div>
 
           {/* Columna Derecha: Formulario Blanco Flotante */}
