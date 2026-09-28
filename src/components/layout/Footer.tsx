@@ -1,6 +1,48 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
+import { Plus, Minus, ArrowUpRight } from "lucide-react";
+
+const directoryData: Record<string, { title: string, links: string[] }[]> = {
+  "Ciudad de México": [
+    {
+      title: "Desarrollos en Benito Juárez",
+      links: ["Álamos", "Ciudad de los deportes", "Del Carmen", "General Anaya", "Mixcoac", "Nápoles", "Narvarte"]
+    },
+    {
+      title: "Desarrollos en Miguel Hidalgo",
+      links: ["Polanco", "Lomas de Chapultepec", "Anzures", "Bosques de las Lomas", "Escandón"]
+    },
+    {
+      title: "Desarrollos en Coyoacán",
+      links: ["Centro Histórico", "Pedregal", "Chimalistac", "Paseos de Taxqueña"]
+    },
+    {
+      title: "Desarrollos en Azcapotzalco",
+      links: ["El Recreo", "Clavería", "Nueva Santa María"]
+    },
+    {
+      title: "Desarrollos en Cuauhtémoc",
+      links: ["Roma Norte", "Condesa", "Juárez", "Cuauhtémoc", "Hipódromo"]
+    }
+  ],
+  "Estado de México": [
+    {
+      title: "Desarrollos en Huixquilucan",
+      links: ["Interlomas", "Bosque Real", "Lomas Country Club"]
+    },
+    {
+      title: "Desarrollos en Naucalpan",
+      links: ["Satélite", "Lomas Verdes", "Tecamachalco"]
+    }
+  ],
+  "Mérida": [
+    {
+      title: "Desarrollos en el Norte",
+      links: ["Temozón", "Altabrisa", "Montecristo", "Cholul", "Dzityá"]
+    }
+  ]
+};
 
 export default function Footer() {
   return (
